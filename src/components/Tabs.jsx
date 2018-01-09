@@ -4,7 +4,7 @@
 "use strict";
 import React, {Component} from "react";
 
-class Grid extends Component {
+class Tabs extends Component {
 	constructor(props) {
 		super(props);
 	}
@@ -36,6 +36,6 @@ class Grid extends Component {
 	}
 }
 
-Grid.defaultProps = {};
+Tabs.defaultProps = {};
 
-export default Grid;
+export default Tabs;

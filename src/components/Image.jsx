@@ -4,7 +4,7 @@
 "use strict";
 import React, {Component} from "react";
 
-class Grid extends Component {
+class Image extends Component {
 	constructor(props) {
 		super(props);
 	}
@@ -32,10 +32,10 @@ class Grid extends Component {
 	}
 
 	render() {
-		return null;
+		return <img src="http://static1.redcart.pl/templates/images/thumb/17604/1500/1500/pl/0/templates/images/products/17604/34b0c831886d0a62c2001d9604214f65.jpg"/>;
 	}
 }
 
-Grid.defaultProps = {};
+Image.defaultProps = {};
 
-export default Grid;
+export default Image;

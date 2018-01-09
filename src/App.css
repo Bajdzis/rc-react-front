@@ -1,1 +1,19 @@
+.thumbs img{
+    width: calc(20% - 16px);
+    margin: 0 8px;
+}
 
+.mainPhoto{
+    position: relative;
+}
+.arrow{
+    position:absolute;
+    top:50%;
+}
+
+.arrowLeft{
+    left:0px;
+}
+.arrowRight{
+    right:0px;
+}

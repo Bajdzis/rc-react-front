@@ -3,8 +3,8 @@
  */
 "use strict";
 import React, {Component} from "react";
-
-class Grid extends Component {
+import Icon from './Icon';
+class Button extends Component {
 	constructor(props) {
 		super(props);
 	}
@@ -32,10 +32,10 @@ class Grid extends Component {
 	}
 
 	render() {
-		return null;
+		return <button {...this.props} className="btn">{this.props.icon?<Icon name={this.props.icon}/>:null}{this.props.children}</button>;
 	}
 }
 
-Grid.defaultProps = {};
+Button.defaultProps = {};
 
-export default Grid;
+export default Button;

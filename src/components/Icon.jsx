@@ -2,11 +2,12 @@
  * @author Michał Żaloudik <ponury.kostek@gmail.com>
  */
 "use strict";
-import React, {Component} from "react";
+import React, { Component } from "react";
 
-class Grid extends Component {
+class Icon extends Component {
 	constructor(props) {
 		super(props);
+		this.set = { bootstrap: 'glyphicon glyphicon-' }
 	}
 
 	componentDidMount() {
@@ -32,10 +33,10 @@ class Grid extends Component {
 	}
 
 	render() {
-		return null;
+		return <span className={this.props.className + " glyphicon glyphicon-" + this.props.name}> </span>;
 	}
 }
 
-Grid.defaultProps = {};
+Icon.defaultProps = {};
 
-export default Grid;
+export default Icon;
