@@ -7,6 +7,7 @@ import React, {Component} from "react";
 class Image extends Component {
 	constructor(props) {
 		super(props);
+		this.loadImg = this.loadImg.bind(this);
 	}
 
 	componentDidMount() {
@@ -31,8 +32,20 @@ class Image extends Component {
 	componentDidCatch(error, info) {
 	}
 
+
+	loadImg(element){
+		this.img = element;
+		if (element === null){
+			console.log("element jest odpinany nic z nim nie zrobie");
+			return;
+		}
+		console.log(element);
+		//w przeciwnym razie moge robić magie zwykłym JSem
+		element.style.boxShadow = "rgba(0, 0, 0, 0.16) 0px 0px 5px 3px";
+	}
+
 	render() {
-		return <img src="http://static1.redcart.pl/templates/images/thumb/17604/1500/1500/pl/0/templates/images/products/17604/34b0c831886d0a62c2001d9604214f65.jpg"/>;
+		return <img ref={this.loadImg} src={this.props.photosUrl}/>;
 	}
 }
 

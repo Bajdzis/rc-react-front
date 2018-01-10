@@ -9,30 +9,9 @@ class Button extends Component {
 		super(props);
 	}
 
-	componentDidMount() {
-	}
-
-	componentWillUnmount() {
-	}
-
-	componentWillReceiveProps(nextProps) {
-	}
-
-	shouldComponentUpdate(nextProps, nextState) {
-		return true;
-	}
-
-	componentWillUpdate(nextProps, nextState) {
-	}
-
-	componentDidUpdate(prevProps, prevState) {
-	}
-
-	componentDidCatch(error, info) {
-	}
 
 	render() {
-		return <button {...this.props} className="btn">{this.props.icon?<Icon name={this.props.icon}/>:null}{this.props.children}</button>;
+		return <button className="btn" {...this.props}>{this.props.icon?<Icon name={this.props.icon}/>:null}{this.props.children}</button>;
 	}
 }
 

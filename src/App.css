@@ -1,19 +1,94 @@
 .thumbs img{
     width: calc(20% - 16px);
-    margin: 0 8px;
+    margin: 20px 16px 0px 0px;
 }
 
 .mainPhoto{
     position: relative;
+    display: flex;
+    justify-content: center;
+    padding-top:30px;
+}
+.pinfo-description{
+    padding-top:30px;
+}
+.mainPhoto img{
+    max-height:600px;
 }
 .arrow{
     position:absolute;
     top:50%;
+    font-size: 30px;
 }
 
-.arrowLeft{
+.arrowLEFT{
     left:0px;
 }
-.arrowRight{
+.arrowRIGHT{
     right:0px;
+}
+
+.thumbsContent{
+    display: inline-block;
+    padding: 20px 0px;
+}
+
+.thumbs img{
+    cursor:pointer;
+}
+
+.thumbsTitle{
+    cursor:pointer;
+    padding: 0 15px;
+}
+
+.thumbsTitle{
+    color:#000;
+    transition: all .4s;
+}
+
+.active.thumbsTitle{
+    color:rgb(0, 113, 189);
+}
+
+.pinfo-name {
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0 0 30px 0;
+}
+
+.pinfo-price{
+    font-size: 35px;
+     color:rgb(0, 113, 189);
+     font-weight:bold;
+}
+
+.pinfo-star{
+    font-size: 18px;
+}
+
+.pinfo-options-block{
+    margin-bottom:20px;
+}
+
+.pinfo-options{
+    padding: 25px 0;
+    border-top:1px solid #ccc;
+    margin-top:20px;
+
+}
+
+.pinfo-options-description{
+    color:rgb(0, 113, 189);
+}
+
+
+.pinfo-tabs{
+    padding-top:30px;
+}
+
+.btn-block{
+        padding: 11px 52px 12px;
+        font-size:17px;
+        letter-spacing: .7px;
 }

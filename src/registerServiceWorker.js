@@ -84,7 +84,7 @@ function checkValidServiceWorker(swUrl) {
         // No service worker found. Probably a different app. Reload the page.
         navigator.serviceWorker.ready.then(registration => {
           registration.unregister().then(() => {
-            window.location.reload();
+            window.location.reload();//TO NIE ZADZIAŁA SW ma swojego własnego scope i nie ma dostępu do obiektu WINDOW
           });
         });
       } else {
@@ -93,6 +93,7 @@ function checkValidServiceWorker(swUrl) {
       }
     })
     .catch(() => {
+      //PRZEGLĄDARKI POSIADAJĄ SPECJALNĄ FUNKCJE DO SPRAWDZANIA CZY MAJĄ DOSTĘP DO INTERNETU
       console.log(
         'No internet connection found. App is running in offline mode.'
       );

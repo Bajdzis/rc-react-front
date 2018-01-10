@@ -2,9 +2,9 @@
  * @author Michał Żaloudik <ponury.kostek@gmail.com>
  */
 "use strict";
-import React, { Component } from "react";
-
-class Rating extends Component {
+import React, {Component} from "react";
+import Icon from './Icon';
+export default class Tag extends Component {
 	constructor(props) {
 		super(props);
 	}
@@ -32,10 +32,12 @@ class Rating extends Component {
 	}
 
 	render() {
-		return;
+		const Tag = this.props.name;
+
+		return <Tag {...this.props}> {this.props.children} </Tag>; ;
 	}
 }
 
-Rating.defaultProps = {};
-
-export default Rating;
+Tag.defaultProps = {
+	tag: "h1"
+};
