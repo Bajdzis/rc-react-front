@@ -53,7 +53,7 @@ export default class Feature extends React.Component {
 			});
 			sizesContainer = (
 				<div className="sizesContainer">
-					<Tag name="h4" class="container-title">
+					<Tag name="h4" className="container-title">
 						Wybierz rozmiar:
 					</Tag>
 					{sizes}
@@ -68,7 +68,7 @@ export default class Feature extends React.Component {
 		return (
 			<Row className="pinfo-features">
 				<Col xs={6}>
-					<Tag name="h4" class="container-title">
+					<Tag name="h4" className="container-title">
 						Wybierz kolor:
 					</Tag>
 					{colorItems}
