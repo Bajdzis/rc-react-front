@@ -9,28 +9,6 @@ export default class Tag extends Component {
 		super(props);
 	}
 
-	componentDidMount() {
-	}
-
-	componentWillUnmount() {
-	}
-
-	componentWillReceiveProps(nextProps) {
-	}
-
-	shouldComponentUpdate(nextProps, nextState) {
-		return true;
-	}
-
-	componentWillUpdate(nextProps, nextState) {
-	}
-
-	componentDidUpdate(prevProps, prevState) {
-	}
-
-	componentDidCatch(error, info) {
-	}
-
 	render() {
 		const Tag = this.props.name;
 
