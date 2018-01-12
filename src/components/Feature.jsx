@@ -2,17 +2,33 @@ import React from "react";
 import PropTypes from "prop-types";
 import Tag from "./Tag";
 import {Grid, Row, Col} from "react-bootstrap";
+import {Transition, TransitionGroup} from "react-transition-group";
 
+const duration = 800;
+const defaultStyle = {
+	transition: `opacity ${duration}ms ease-in-out`,
+	opacity: 0
+};
+const transitionStyles = {
+	entering: {opacity: 0},
+	entered: {opacity: 1}
+};
 export default class Feature extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			activeColor: null,
-			activeSize: null
+			activeSize: null,
+			show: false
 		};
 	}
 
 	activeColor(color) {
+		if (this.state.activeColor !== null) {
+			this.setState({show: !!this.state.show});
+		} else {
+			this.setState({show: !this.state.show});
+		}
 		if (this.state.activeColor === color) {
 			this.setState({activeColor: null});
 			return;
@@ -45,7 +61,14 @@ export default class Feature extends React.Component {
 				<Tag name="h4" className="container-title"> Wybierz rozmiar: </Tag> {sizes}
 			</div>);
 		}
+		const Fade = ({in: inProp}) => (<Transition in={inProp} timeout={duration}>
+			{(state) => (<div style={{
+				...defaultStyle, ...transitionStyles[state]
+			}}>
+				{sizesContainer}
+			</div>)}
+		</Transition>);
 		return (<Row className="pinfo-features"> <Col xs={6}> <Tag name="h4" className="container-title"> Wybierz kolor: </Tag> {colorItems}
-		</Col> <Col xs={6}>{sizesContainer}</Col> </Row>);
+		</Col> <Col xs={6}> <Fade in={this.state.show}/> </Col> </Row>);
 	}
 }
