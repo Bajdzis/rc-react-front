@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Icon from './Icon';
 
 export default class Stars extends React.Component {
+
     createStars() {
 
         let stars = [];

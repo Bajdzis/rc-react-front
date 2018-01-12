@@ -92,3 +92,67 @@
         font-size:17px;
         letter-spacing: .7px;
 }
+
+a.colours, a.rozmiary{
+    width: 30px;
+    height: 30px;
+    
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    cursor: pointer;
+     outline: 1px solid black;
+     border:1px solid #fff;
+     font-size:12px;
+     color:#000;
+}
+
+.pinfo-features{
+    padding:15px 0;
+    border-top:1px solid #ccc;
+    margin-top: 15px;
+}
+
+.pinfo-buyPanel.row{
+      padding:25px 0;
+}
+
+.pinfo-features.row .active{
+box-shadow: rgb(43, 103, 154) 0px 0px 2px 2px;
+}
+
+input{
+    width: calc(100% - 76px);
+    height: 49px;
+    text-align: center;
+}
+
+.product-input-flex{
+    display: flex;
+    text-align: center;
+}
+
+.product-input-flex a {
+    padding: 0 10px;
+    line-height: 48px;
+    font-size: 12px;
+    color: #010101;
+    background-color: #fff;
+    cursor: pointer;
+}
+a:hover{
+    text-decoration:none;
+}
+
+a.rozmiary[disabled]{
+        background: #d6d6d6;
+    color: white;
+    border: 2px solid rgb(185, 185, 185);
+    pointer-events: none;
+    box-shadow:none;
+}
+
+h4.container-title{
+    margin-bottom: 20px;
+}
