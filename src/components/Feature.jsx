@@ -13,7 +13,12 @@ export default class Feature extends React.Component {
 	}
 
 	activeColor(color) {
-		this.setState({ activeColor: color });
+        if(this.state.activeColor === color){
+            this.setState({ activeColor: null});
+            return;
+        }
+
+        this.setState({ activeColor: color });  
 	}
 
 	activeSize(size) {

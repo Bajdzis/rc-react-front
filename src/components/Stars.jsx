@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 
 export default class Stars extends React.Component {
-    Icon = this.props.iconComponent;
+
     createStars() {
-        const Icon = this.Icon;
+        const Icon = this.props.iconComponent;
         let stars = [];
         for (let i = 0; i < this.props.length; i++) {
             stars.push(<Icon key={i} className="pinfo-star" name="star-empty" />);
