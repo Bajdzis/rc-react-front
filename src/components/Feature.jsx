@@ -20,6 +20,10 @@ export default class Feature extends React.Component {
 		this.setState({ activeSize: size });
 	}
 
+	removeActiveSize() {
+		this.setState({ activeSize: null });
+	}
+
 	render() {
 		const colorItems = this.props.colours.map((color, index) => (
 			<a
@@ -27,6 +31,7 @@ export default class Feature extends React.Component {
 				className={this.state.activeColor === color ? 'active colours' : 'colours'}
 				onClick={() => {
 					this.activeColor(color);
+					this.removeActiveSize();
 				}}
 				title={color.name}
 				style={{ background: color.color }}
@@ -38,17 +43,16 @@ export default class Feature extends React.Component {
 			let sizes = Object.keys(this.state.activeColor.items).map((size) => {
 				let quantity = this.state.activeColor.items[size];
 				return (
-					quantity > 0 && (
-						<a
-							className={this.state.activeSize === size ? 'active rozmiary' : 'rozmiary'}
-							key={size}
-							onClick={() => {
-								this.activeSize(size);
-							}}
-						>
-							<span> {size} </span>
-						</a>
-					)
+					<a
+						className={this.state.activeSize === size ? 'active rozmiary' : 'rozmiary'}
+						disabled={quantity <= 0 && 'data-role="disabled"'}
+						key={size}
+						onClick={() => {
+							this.activeSize(size);
+						}}
+					>
+						<span> {size} </span>
+					</a>
 				);
 			});
 			sizesContainer = (
