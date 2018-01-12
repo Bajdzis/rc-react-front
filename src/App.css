@@ -102,11 +102,15 @@ a.colours, a.rozmiary{
     align-items: center;
     margin: 0 5px;
     cursor: pointer;
+    box-shadow: none;
      outline: 1px solid black;
      border:1px solid #fff;
      font-size:12px;
      color:#000;
+     transition:  500ms ease-in;
+    
 }
+
 
 .pinfo-features{
     padding:15px 0;

@@ -23,7 +23,9 @@ class Tabs extends Component {
 		const TabsHeader = this.props.headers;
 
 
-		return (<div> <Tag name="h3" className="pinfo-tabs"> 
+		return (
+		
+		<div> <Tag name="h3" className="pinfo-tabs"> 
 		
 			{TabsHeader.map((name, index) => {
 				return index === this.state.activeTab ? <span key={index} className="active thumbsTitle" onClick={() => { this.activeTabs(index)}}> {name} 

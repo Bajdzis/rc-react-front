@@ -58,7 +58,12 @@ class Pinfo extends Component {
 						/>
 					
 					</Col>
+					<Col xs={12}>
+
+						
+					</Col>
 				</Row>
+
 			</Grid>
 		);
 	}
