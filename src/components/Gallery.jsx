@@ -5,6 +5,7 @@
 import React, {Component} from "react";
 import {Grid, Row, Col} from 'react-bootstrap';
 import Image from './Image';
+import Thumbs from './Thumb';
 import Button from './Button';
 import Icon from './Icon';
 
@@ -39,8 +40,8 @@ class Gallery extends Component {
 	}
 
 	render() {
-		const Thumbs = this.props.thumbComponent;
-		
+
+
 		const thumbs = (<Thumbs
 			thumbsUrl={this.props.photosUrls}
 			onchange={(index) => {
@@ -52,16 +53,16 @@ class Gallery extends Component {
 		return <div><Row>
 				<Col xs={12} className="mainPhoto">
 				<span onClick={this.previewPhoto}><GalleryArrow dir="left" /></span>
-					<Image 
+					<Image
 						photosUrl = {this.props.photosUrls[this.state.activePhoto]}
-					/> 
+					/>
 				<span onClick={this.nextPhoto}><GalleryArrow dir="right" /></span>
 				</Col>
 			</Row>
 			<Row>
 				<Col xs={12} className="thumbs">
 					{thumbs}
-					
+
 
 				 {/* {(()=>{
 					const thumbs = [];

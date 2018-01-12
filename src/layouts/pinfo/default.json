@@ -1,0 +1,59 @@
+{
+  "grid": {
+    "rows": [
+      {
+        "cols": [
+          {
+            "props": {
+              "xs": 12,
+              "md": 6
+            },
+            "component": {
+              "name": "Gallery",
+              "props": {
+                "photosUrls": [
+                  "http://static3.redcart.pl/templates/images/thumb/17604/1500/1500/pl/0/templates/images/products/17604/dfd3175b8c36cad2de375c56a6ea6cac.jpg",
+                  "http://static5.redcart.pl/templates/images/thumb/17604/1500/1500/pl/0/templates/images/products/17604/33a82c1561de501102275097c49f1d15.jpg",
+                  "http://static2.redcart.pl/templates/images/thumb/17604/1500/1500/pl/0/templates/images/products/17604/ace1f4541e4ef77a2245d163af37048d.jpg",
+                  "http://static3.redcart.pl/templates/images/thumb/17604/1500/1500/pl/0/templates/images/products/17604/dfd3175b8c36cad2de375c56a6ea6cac.jpg",
+                  "http://static5.redcart.pl/templates/images/thumb/17604/1500/1500/pl/0/templates/images/products/17604/33a82c1561de501102275097c49f1d15.jpg"
+                ]
+              }
+            }
+          },
+          {
+            "props": {
+              "xs": 12,
+              "md": 12
+            },
+            "component": {
+              "name": "Tabs",
+              "props": {
+                "headers": [
+                  "opis produktu",
+                  "specyfikacja"
+                ],
+                "contents": [
+                  "Awama A23 bluzka Elegancka koszula, wykonana z delikatnie przejrzystego materiału. Przód zapinany na guziki, ukryte pod plisą w kontrastowym kolorze. Góra zakończona kołnierzykiem. Luźny krój sprawia, że doskonale układa się na każdej sylwetce.",
+                  "Klatka piersiowa:\t100\nObwód w pasie:\t80\nBiodra:\t60\nDługość rękawa:\t50\nDługość:\t40"
+                ]
+              }
+            }
+          },
+          {
+            "props": {
+              "xs": 12,
+              "md": 6
+            },
+            "component": {
+              "name": "Description",
+              "props": {
+                "price": "299,99 pln"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

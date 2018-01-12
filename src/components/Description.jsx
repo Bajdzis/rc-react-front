@@ -3,23 +3,22 @@
  */
 import React, {Component} from "react";
 import Stars from './Stars';
-
+import Tag from './Tag';
+import Option from './Option';
+import Button from './Button';
 
 export default class Description extends Component {
 
 	render() {
-		const Tag = this.props.tagComponent;
-		const Option = this.props.optionComponent;
-		const Button = this.props.buttonComponent;
+
 		return (
 			<div className="pinfo-description">
 			<Tag name="h1" className="pinfo-name"> Biały kubek XXL z Twoim nadrukiem Fotokubek</Tag>
 			<Tag name="div" className="pinfo-stars">
 				<Stars
-						iconComponent={this.props.iconComponent}
 						value={3}
 						length={5}
-				/> 
+				/>
 			</Tag>
 			<Tag name="div" className="pinfo-price"> {this.props.price}</Tag>
 			<div className="pinfo-options">

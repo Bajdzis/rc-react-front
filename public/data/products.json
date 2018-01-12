@@ -1,0 +1,53 @@
+[
+  {
+    "_id": "0123456789ab",
+    "name": "Enny 6009 bluzka",
+    "price": 123,
+    "description": "Enny 6009 bluzka Kobieca i seksowna, dzianinowa bluzka w modnych kolorach. Dekolt okrągły, rękaw krótki. Delikatne zakładki na dekolcie, zwraca uwagę na biust. Model ponadczasowy i niepowtarzalny. Sprawdzi się w wielu Twoich stylizacjach! Bluzka wykonana z wiskozowej dzianiny. Produkt wyprodukowany w Polsce. Skład: 95% wiskoza, 5% elastan.",
+    "images": [
+      {
+        "label": "Zdjęcie główne",
+        "url": "http://static2.redcart.pl/templates/images/thumb/17604/1500/1500/pl/0/templates/images/products/17604/6-46009_0.jpg",
+        "thumb": "http://static2.redcart.pl/templates/images/thumb/17604/250/250/pl/0/templates/images/products/17604/6-46009_0.jpg"
+      },
+      {
+        "label": "Zdjęcie dodatkowe",
+        "url": "http://static2.redcart.pl/templates/images/thumb/17604/1500/1500/pl/0/templates/images/products/17604/6-46009_1.jpg",
+        "thumb": "http://static2.redcart.pl/templates/images/thumb/17604/250/250/pl/0/templates/images/products/17604/6-46009_1.jpg"
+      },
+      {
+        "label": "Zdjęcie dodatkowe",
+        "url": "http://static4.redcart.pl/templates/images/thumb/17604/1500/1500/pl/0/templates/images/products/17604/17088c7e8f0f357f0579f6ded5ad3245.jpg",
+        "thumb": "http://static4.redcart.pl/templates/images/thumb/17604/250/250/pl/0/templates/images/products/17604/17088c7e8f0f357f0579f6ded5ad3245.jpg"
+      }
+    ],
+    "producer": {
+      "_id": "",
+      "name": "Enny",
+      "image": "http://static1.redcart.pl/templates/images/thumb/17604/120/60/pl/0/templates/images/producers/17604/9994f8fc7736dccd6150942d4610d31c.png"
+    },
+    "variants" : [{"key" : "", "value" :""}],
+    "options": [
+      {
+        "name": "Klatka piersiowa",
+        "value": 100
+      },
+      {
+        "name": "Obwód w pasie",
+        "value": 80
+      },
+      {
+        "name": "Biodra",
+        "value": 60
+      },
+      {
+        "name": "Długość rękawa",
+        "value": 50
+      },
+      {
+        "name": "Długość",
+        "value": 40
+      }
+    ]
+  }
+]
