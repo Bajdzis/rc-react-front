@@ -5,8 +5,8 @@ import Pinfo from "./modules/Pinfo";
 class App extends Component {
 	render() {
 		return (<div className="App">
-				<Pinfo/>
-			</div>);
+			<Pinfo/>
+		</div>);
 	}
 }
 

@@ -3,7 +3,8 @@
  */
 "use strict";
 import React, {Component} from "react";
-import Tag from './Tag';
+import Tag from "./Tag";
+
 class Tabs extends Component {
 	constructor(props) {
 		super(props);
@@ -14,40 +15,28 @@ class Tabs extends Component {
 	}
 
 	activeTabs(index) {
-		this.setState({ activeTab: index });
-
+		this.setState({activeTab: index});
 	}
 
 	render() {
-
 		const TabsHeader = this.props.headers;
-
-
-		return (<div> <Tag name="h3" className="pinfo-tabs">
-
+		return (<div><Tag name="h3" className="pinfo-tabs">
 			{TabsHeader.map((name, index) => {
-				return index === this.state.activeTab ? <span key={index} className="active thumbsTitle" onClick={() => { this.activeTabs(index)}}> {name}
-				</span> : <span key={index} className="thumbsTitle" onClick={() => { this.activeTabs(index)}}> {name} </span>;
+				return index === this.state.activeTab ? <span key={index} className="active thumbsTitle" onClick={() => {
+					this.activeTabs(index);
+				}}> {name}
+				</span> : <span key={index} className="thumbsTitle" onClick={() => {
+					this.activeTabs(index);
+				}}> {name} </span>;
 			})}
-
-
+		</Tag> <Tag name="div">
+			{this.props.contents.map((content, index) => {
+				return index === this.state.activeTab && <div key={index} className="thumbsContent"> {content} </div>;
+			})}
 		</Tag>
-
-			<Tag name="div">
-
-				{this.props.contents.map((content, index) => {
-					return index === this.state.activeTab && <div key={index} className="thumbsContent"> { content } </div>;
-				})}
-
-
-			</Tag>
-
-
-		</div>)
+		</div>);
 	}
 }
 
-Tabs.defaultProps = {
-};
-
+Tabs.defaultProps = {};
 export default Tabs;

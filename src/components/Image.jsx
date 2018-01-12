@@ -32,10 +32,9 @@ class Image extends Component {
 	componentDidCatch(error, info) {
 	}
 
-
-	loadImg(element){
+	loadImg(element) {
 		this.img = element;
-		if (element === null){
+		if (element === null) {
 			console.log("element jest odpinany nic z nim nie zrobie");
 			return;
 		}
@@ -50,5 +49,4 @@ class Image extends Component {
 }
 
 Image.defaultProps = {};
-
 export default Image;

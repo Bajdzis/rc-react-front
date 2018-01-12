@@ -1,9 +1,10 @@
 /**
  * @author Michał Żaloudik <ponury.kostek@gmail.com>
  */
-'use strict';
-import React, { Component } from 'react';
-import Icon from './Icon';
+"use strict";
+import React, {Component} from "react";
+import Icon from "./Icon";
+
 export default class Input extends Component {
 	constructor(props) {
 		super(props);
@@ -16,35 +17,32 @@ export default class Input extends Component {
 	}
 
 	increaseInputValue() {
-		this.setState({ inputValue: this.state.inputValue + 1 });
+		this.setState({inputValue: this.state.inputValue + 1});
 	}
 
 	decreaseInputValue() {
 		if (this.state.inputValue <= 1) {
 			return;
 		}
-		this.setState({ inputValue: this.state.inputValue - 1 });
+		this.setState({inputValue: this.state.inputValue - 1});
 	}
 
 	handleChange(event) {
-		this.setState({ inputValue: event.target.value });
+		this.setState({inputValue: event.target.value});
 	}
 
 	render() {
-		return (
-			<span>
+		return (<span>
 				<a href="#" onClick={this.decreaseInputValue}>
-					<Icon className="pinfo-add" name="minus" />
+					<Icon className="pinfo-add" name="minus"/>
 				</a>
-				<input type="text" onChange={this.handleChange} value={this.state.inputValue} />
+				<input type="text" onChange={this.handleChange} value={this.state.inputValue}/>
 				<a href="#" onClick={this.increaseInputValue}>
-					<Icon className="pinfo-remove" name="plus" />
+					<Icon className="pinfo-remove" name="plus"/>
 				</a>
-			</span>
-		) 
+			</span>);
 	}
 }
-
 Input.defaultProps = {
 	value: 1
 };
