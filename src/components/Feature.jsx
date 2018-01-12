@@ -24,15 +24,15 @@ export default class Feature extends React.Component {
 	}
 
 	activeColor(color) {
-		this.setState({ show: !this.state.show});
+        
+        this.setState({ show: !this.state.show });
 		if (this.state.activeColor === color) {
 			this.setState({activeColor: null});
 			return;
         }
         if (this.state.activeColor !== null) {
-            this.setState({ show: !!this.state.show });
-        }
-        }
+			this.setState({show: !!this.state.show});
+		} 
 		this.setState({activeColor: color});
 	}
 
