@@ -24,6 +24,18 @@
           {
             "props": {
               "xs": 12,
+              "md": 6
+            },
+            "component": {
+              "name": "Description",
+              "props": {
+                "price": "299,99 pln"
+              }
+            }
+          },
+          {
+            "props": {
+              "xs": 12,
               "md": 12
             },
             "component": {
@@ -39,19 +51,8 @@
                 ]
               }
             }
-          },
-          {
-            "props": {
-              "xs": 12,
-              "md": 6
-            },
-            "component": {
-              "name": "Description",
-              "props": {
-                "price": "299,99 pln"
-              }
-            }
           }
+         
         ]
       }
     ]
