@@ -11,11 +11,15 @@ import Description from "./Description";
 import Icon from "./Icon";
 import Option from "./Option";
 import Button from "./Button";
+import Header from "./Header";
+import FixedCart from "./FixedCart";
 
 const Components = {
 	Description: Description,
 	Gallery: Gallery,
-	Tabs
+	Tabs,
+	Header,
+	FixedCart
 };
 
 class DynGrid extends Component {
