@@ -1,10 +1,11 @@
 /**
  * @author Michał Żaloudik <ponury.kostek@gmail.com>
  */
-"use strict";
-import React, {Component} from "react";
-import DynGrid from "../components/DynGrid";
-import lay from "../layouts/pinfo/default";
+'use strict';
+import React, { Component } from 'react';
+import DynGrid from '../components/DynGrid';
+import lay from '../layouts/pinfo/default';
+import FixedCart from '../components/FixedCart';
 
 class Pinfo extends Component {
 	constructor(props) {
@@ -12,7 +13,14 @@ class Pinfo extends Component {
 	}
 
 	render() {
-		return <DynGrid lay={lay}/>;
+		return (
+			<div>
+				<DynGrid lay={lay} />
+				 <FixedCart 
+				 	visible={true}
+				 />
+			</div>
+		);
 	}
 
 	// renderowanie_innego_grida_dla_dziwnego_klienta() {
@@ -47,6 +55,6 @@ class Pinfo extends Component {
 }
 
 Pinfo.defaultProps = {
-	name: "Nazwa produktu"
+	name: 'Nazwa produktu'
 };
 export default Pinfo;

@@ -5,7 +5,7 @@
 
 .mainPhoto {
     position: relative;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     padding-top: 30px;
 }
@@ -25,11 +25,11 @@
 }
 
 .arrowLEFT {
-    left: 0px;
+    left: 30px;
 }
 
 .arrowRIGHT {
-    right: 0px;
+    right: 30px;
 }
 
 .thumbsContent {
@@ -162,4 +162,59 @@ a.rozmiary[disabled] {
 
 h4.container-title {
     margin-bottom: 20px;
+}
+
+img {
+    flex: 1;
+    max-height: 100%;
+    width: auto;
+}
+
+.header-logo{
+    margin:20px 0;
+}
+
+body * .vertical-center {
+    display: inline-block;
+    vertical-align: middle !important;
+    float: none !important;
+}
+
+.header-shopping-cart{
+    font-size: 26px;
+}
+
+.cart-fixed {
+        background: rgba(255, 255, 255, 0);
+    position: fixed;
+    top: 0px;
+    display: block;
+    height: 100%;
+    width: 100%;
+   display: none;
+  
+    
+}
+
+.cart-fixed .cartPreview {
+    background: #fff;
+    position: fixed;
+    right: 0px;
+    width: 360px;
+    height: 100%;
+    padding: 30px;
+    box-shadow: 0px 0px 10px 3px #d0d0d0;
+   opacity:0;
+     transition: all 1.6s;
+}
+
+.cart-fixed.cart-visible .cartPreview {
+   opacity:1;
+}
+
+.cart-fixed.cart-visible{
+
+    display:block;
+    background: rgba(255, 255, 255, 0.82);
+
 }

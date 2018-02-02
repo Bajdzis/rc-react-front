@@ -9,6 +9,7 @@ import Thumbs from "./Thumb";
 import Button from "./Button";
 import Icon from "./Icon";
 
+
 class GalleryArrow extends Component {
 	render() {
 		return <a {...this.props} className={"arrow arrow" + this.props.dir.toUpperCase()} href="#"><Icon name={"circle-arrow-" + this.props.dir}/></a>;
@@ -43,7 +44,7 @@ class Gallery extends Component {
 		const thumbs = (<Thumbs thumbsUrl={this.props.photosUrls} onchange={(index) => {
 			this.setState({activePhoto: index});
 		}}/>);
-		return <div><Row> <Col xs={12} className="mainPhoto"> <span onClick={this.previewPhoto}><GalleryArrow dir="left"/></span> <Image photosUrl={this.props.photosUrls[this.state.activePhoto]}/> <span onClick={this.nextPhoto}><GalleryArrow dir="right"/></span> </Col> </Row> <Row> <Col xs={12} className="thumbs">
+		return <div><Row> <Col xs={12} className="mainPhoto"> <span onClick={this.previewPhoto}><GalleryArrow dir="left" /></span> <span><Image photosUrl={this.props.photosUrls[this.state.activePhoto]} /></span><span onClick={this.nextPhoto}><GalleryArrow dir="right"/></span> </Col> </Row> <Row> <Col xs={12} className="thumbs">
 			{thumbs} {/* {(()=>{
 					const thumbs = [];
 					for(let i = 0; i< 5; i++) {
