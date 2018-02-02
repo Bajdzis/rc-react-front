@@ -6,6 +6,18 @@
           {
             "props": {
               "xs": 12,
+              "md": 12
+            },
+            "component": {
+              "name": "Header",
+              "props": {
+               
+              }
+            }
+          },
+          {
+            "props": {
+              "xs": 12,
               "md": 6
             },
             "component": {
@@ -58,3 +70,4 @@
     ]
   }
 }
+
