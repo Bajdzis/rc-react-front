@@ -61,14 +61,10 @@ export default class Feature extends React.Component {
 				<Tag name="h4" className="container-title"> Wybierz rozmiar: </Tag> {sizes}
 			</div>);
 		}
-		const Fade = ({in: inProp}) => (<Transition in={inProp} timeout={duration}>
-			{(state) => (<div style={{
-				...defaultStyle, ...transitionStyles[state]
-			}}>
-				{sizesContainer}
-			</div>)}
-		</Transition>);
+
 		return (<Row className="pinfo-features"> <Col xs={6}> <Tag name="h4" className="container-title"> Wybierz kolor: </Tag> {colorItems}
-		</Col> <Col xs={6}> <Fade in={this.state.show}/> </Col> </Row>);
+		</Col> <Col xs={6}> <div >
+				{sizesContainer}
+			</div></Col> </Row>);
 	}
 }
